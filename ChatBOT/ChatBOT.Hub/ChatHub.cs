@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using signalR = Microsoft.AspNet.SignalR;
 
-namespace ChatBOT
+namespace ChatBOT.Hub
 {
     public class ChatHub : signalR.Hub
     {
@@ -18,10 +18,10 @@ namespace ChatBOT
             Groups.Remove(Context.ConnectionId, room);
         }
 
-        public void Send(string name, string room, string message)
-        {
-            //Make service call here and then push data back to client
-            Clients.Group(room).broadcastMessage(name, message);
-        }
+        //public void Send(string name, string room, string message)
+        //{
+        //    Clients.Group(room).broadcastMessage(name, message);
+        //    //Clients.All.broadcastMessage(name, message);
+        //}
     }
 }
