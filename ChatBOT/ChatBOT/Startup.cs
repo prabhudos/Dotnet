@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(SignalR.ChatApp.Startup))]
+[assembly: OwinStartup(typeof(ChatBOT.Startup))]
 
-namespace SignalR.ChatApp
+namespace ChatBOT
 {
     public class Startup
     {
