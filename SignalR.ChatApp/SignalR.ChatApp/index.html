@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Customer Complaints</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" ng-cloak>
+    <h2>Chat</h2>
+    <div class="container">
+        Enter your name: <input type="text" ng-model="name" placeholder="Enter your chat name"/>
+        <br/>
+        Enter room to join: <input type="text" ng-model="room" placeholder="Enter the chat room" />
+        <input type="button" value="Join" ng-click="join(room)" />
+        <input type="button" value="Leave" ng-click="leave(room)" />
+        <ul id="discussion"></ul>
+    </div>
+    <div class="container">
+        <input type="text" ng-model="message" />
+        <input type="button" value="Send" ng-click="send(message)" />
+        <ul id="discussion"></ul>
+    </div>
+
+    <script src="Scripts/jquery-1.6.4.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.3.min.js"></script>
+    <script src="signalr/hubs"></script>
+    <script src="Scripts/chat.js"></script>
+</body>
+</html>
